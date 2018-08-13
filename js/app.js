@@ -4,13 +4,13 @@ var hoursOfOperation = ['6:00 AM', '7:00 AM', '8:00 AM', '9:00 AM', '10:00 AM', 
 
 
 
-// Object for First and Pike
+// ::::: First and Pike ::::: 
 
 var firstAndPike = {
   minCustomers: 23,
   maxCustomers: 65,
-  customersPerHour: [],
   avgCookiesPer: 6.3,
+  customersPerHour: [],
   dailyCustomers: [],
   hourlyCookies: [],
   totalDailyCookies: 0,
@@ -51,4 +51,22 @@ firstAndPike.render = function() {
     liEl.textContent = hoursOfOperation[i] + ': ' + this.hourlyCookies[i] + ' cookies.';
     firstAndPikeUlEl.appendChild(liEl);
   }
+};
+
+firstAndPike.render();
+
+
+
+
+// ::::: SeaTac Airport ::::: 
+
+var seaTacAirport = {
+  minCustomers: 3,
+  maxCustomers: 24,
+  customersPerHour: [],
+  avgCookiesPer: 1.2,
+  dailyCustomers: [],
+  hourlyCookies: [],
+  totalDailyCookies: 0,
+
 };
