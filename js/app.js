@@ -14,7 +14,7 @@ var firstAndPike = {
   dailyCustomers: [],
   hourlyCookies: [],
   totalDailyCookies: 0,
-
+  totalDailyCustomers: 0,
 };
 
 firstAndPike.getRandomIntInclusive = function() {
@@ -40,9 +40,16 @@ firstAndPike.setTotalDailyCookies = function() {
   }
 };
 
+firstAndPike.setTotalDailyCustomers = function() {
+  for(var i = 0; i < hoursOfOperation.length; i++) {
+    this.totalDailyCustomers += this.customersPerHour[i];
+  }
+};
+
 firstAndPike.setCustomersPerHour();
 firstAndPike.setHourlyCookies();
 firstAndPike.setTotalDailyCookies();
+firstAndPike.setTotalDailyCustomers();
 
 firstAndPike.render = function() {
   var firstAndPikeUlEl = document.getElementById('firstAndPike');
@@ -51,6 +58,9 @@ firstAndPike.render = function() {
     liEl.textContent = hoursOfOperation[i] + ': ' + this.hourlyCookies[i] + ' cookies.';
     firstAndPikeUlEl.appendChild(liEl);
   }
+  var liElTotalCookies = document.createElement('li');
+  liElTotalCookies.textContent = 'Total: ' + this.totalDailyCookies + ' cookies.';
+  firstAndPikeUlEl.appendChild(liElTotalCookies);
 };
 
 firstAndPike.render();
@@ -60,13 +70,3 @@ firstAndPike.render();
 
 // ::::: SeaTac Airport ::::: 
 
-var seaTacAirport = {
-  minCustomers: 3,
-  maxCustomers: 24,
-  customersPerHour: [],
-  avgCookiesPer: 1.2,
-  dailyCustomers: [],
-  hourlyCookies: [],
-  totalDailyCookies: 0,
-
-};
