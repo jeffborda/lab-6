@@ -46,10 +46,7 @@ firstAndPike.setTotalDailyCustomers = function() {
   }
 };
 
-firstAndPike.setCustomersPerHour();
-firstAndPike.setHourlyCookies();
-firstAndPike.setTotalDailyCookies();
-firstAndPike.setTotalDailyCustomers();
+
 
 firstAndPike.render = function() {
   var firstAndPikeUlEl = document.getElementById('firstAndPike');
@@ -62,6 +59,11 @@ firstAndPike.render = function() {
   liElTotalCookies.textContent = 'Total: ' + this.totalDailyCookies + ' cookies.';
   firstAndPikeUlEl.appendChild(liElTotalCookies);
 };
+
+firstAndPike.setCustomersPerHour();
+firstAndPike.setHourlyCookies();
+firstAndPike.setTotalDailyCookies();
+firstAndPike.setTotalDailyCustomers();
 
 firstAndPike.render();
 
