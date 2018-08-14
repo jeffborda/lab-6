@@ -1,0 +1,33 @@
+* { 
+  /* font-family: 'Jua', sans-serif; */
+  font-family: 'Caveat', cursive;
+  background: silver;
+}
+
+a {
+  color: black;
+}
+
+ul {
+  margin: .5vw 2vw 1vw 10vw;
+}
+
+li {
+  display: inline-block;
+  margin: 1vw;
+  border: 1vw;
+  padding: 1.5vw 5vw 1.5vw 5vw;
+  font-size: 1.5em;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5em;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+}
