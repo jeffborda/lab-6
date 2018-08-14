@@ -265,9 +265,9 @@ capitolHill.render();
 // :::::: Alki ::::::
 
 var alki = {
-  minCustomers: 20,
-  maxCustomers: 38,
-  avgCookiesPer: 2.3,
+  minCustomers: 2,
+  maxCustomers: 16,
+  avgCookiesPer: 4.6,
   customersPerHour: [],
   dailyCustomers: [],
   hourlyCookies: [],
