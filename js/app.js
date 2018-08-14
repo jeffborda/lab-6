@@ -29,7 +29,6 @@ firstAndPike.setCustomersPerHour = function() {
 
 firstAndPike.setHourlyCookies = function() {
   for(var i = 0; i < hoursOfOperation.length; i++) {
-    //console.log(Math.ceiling(this.customersPerHour[i] * this.avgCookiesPer));//TESTING
     this.hourlyCookies.push(Math.round(this.customersPerHour[i] * this.avgCookiesPer));
   }
 };
@@ -95,7 +94,6 @@ seaTacAirport.setCustomersPerHour = function() {
 
 seaTacAirport.setHourlyCookies = function() {
   for(var i = 0; i < hoursOfOperation.length; i++) {
-    //console.log(Math.ceiling(this.customersPerHour[i] * this.avgCookiesPer));//TESTING
     this.hourlyCookies.push(Math.round(this.customersPerHour[i] * this.avgCookiesPer));
   }
 };
@@ -159,7 +157,6 @@ seattleCenter.setCustomersPerHour = function() {
 
 seattleCenter.setHourlyCookies = function() {
   for(var i = 0; i < hoursOfOperation.length; i++) {
-    //console.log(Math.ceiling(this.customersPerHour[i] * this.avgCookiesPer));//TESTING
     this.hourlyCookies.push(Math.round(this.customersPerHour[i] * this.avgCookiesPer));
   }
 };
@@ -223,7 +220,6 @@ capitolHill.setCustomersPerHour = function() {
 
 capitolHill.setHourlyCookies = function() {
   for(var i = 0; i < hoursOfOperation.length; i++) {
-    //console.log(Math.ceiling(this.customersPerHour[i] * this.avgCookiesPer));//TESTING
     this.hourlyCookies.push(Math.round(this.customersPerHour[i] * this.avgCookiesPer));
   }
 };
@@ -287,7 +283,6 @@ alki.setCustomersPerHour = function() {
 
 alki.setHourlyCookies = function() {
   for(var i = 0; i < hoursOfOperation.length; i++) {
-    //console.log(Math.ceiling(this.customersPerHour[i] * this.avgCookiesPer));//TESTING
     this.hourlyCookies.push(Math.round(this.customersPerHour[i] * this.avgCookiesPer));
   }
 };
