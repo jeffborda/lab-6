@@ -62,6 +62,7 @@ SalmonCookieStore.prototype.setTotalDailyCustomers = function() {
 
 
 //Try moving above makeHeaderRow() for testing
+
 SalmonCookieStore.prototype.render = function() {
 
 
