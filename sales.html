@@ -15,16 +15,16 @@
               <legen>New store submission form</legen>
 
               <label for="location">Location Name:</label>
-              <input name="location" type="text" />
+              <input name="location" type="text" required />
 
               <label for="min">Minimum customers:</label>
-              <input name="min" type="number" />
+              <input name="min" type="number" required min="1" max="1000" />
 
               <label for="max">Maximum customers:</label>
-              <input name="max" type="number" />
+              <input name="max" type="number" required min="1" max="1000" />
 
               <label for="avg">Average cookies per hour:</label>
-              <input name="avg" type="text" />
+              <input name="avg" type="text" required minlength="3" maxlength="4" />
 
 
 

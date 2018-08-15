@@ -15,7 +15,7 @@ function SalmonCookieStore(storeName, minCustomers, maxCustomers, avgCookiesPer)
   this.dailyCustomers = [];
   this.hourlyCookies = [];
   this.totalDailyCookies = 0;
-  this.totalDailyCookies = 0;
+  this.totalDailyCustomers = 0;
 
   this.setCustomersPerHour();
   this.setHourlyCookies();
@@ -151,9 +151,6 @@ function handleNewStoreSubmit(event) {
 
 //Listener
 newLocationForm.addEventListener('submit', handleNewStoreSubmit);
-
-
-
 
 new SalmonCookieStore('First and Pike', 23, 65, 6.3);
 new SalmonCookieStore('SeaTac Airport', 3, 24, 1.2);
