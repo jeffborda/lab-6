@@ -73,7 +73,7 @@ SalmonCookieStore.prototype.render = function() {
 function makeHeaderRow() {
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
-  thEl.textContent = '';
+  thEl.textContent = 'LOCATION';
   trEl.appendChild(thEl);
   salesTable.appendChild(trEl);
   for(var i = 0; i < hoursOfOperation.length; i++) {
