@@ -31,3 +31,12 @@ img {
   margin-right: auto;
   width: 45%;
 }
+
+table {  
+  border-collapse: collapse;  
+}
+
+table, th, td {
+  font-family: 'Arial', sans-serif;
+  border: 1px solid black;
+}
