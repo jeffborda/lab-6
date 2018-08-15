@@ -1,13 +1,8 @@
 'use strict';
 
 var hoursOfOperation = ['6:00 AM', '7:00 AM', '8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM', '8:00 PM'];
-
 var allLocations = [];
-
 var salesTable = document.getElementById('stores');
-
-
-// ::::: First and Pike :::::
 
 function SalmonCookieStore(storeName, minCustomers, maxCustomers, avgCookiesPer) {
   this.storeName = storeName;
@@ -29,7 +24,8 @@ function SalmonCookieStore(storeName, minCustomers, maxCustomers, avgCookiesPer)
 }
 
 SalmonCookieStore.prototype.getRandomIntInclusive = function() {
-  return Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1)) + this.minCustomers; //The maximum is inclusive and the minimum is inclusive
+  //Max and min are inclusive
+  return Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1)) + this.minCustomers;
 };
 
 SalmonCookieStore.prototype.setCustomersPerHour = function() {
@@ -56,16 +52,7 @@ SalmonCookieStore.prototype.setTotalDailyCustomers = function() {
   }
 };
 
-
-
-
-
-
-//Try moving above makeHeaderRow() for testing
-
 SalmonCookieStore.prototype.render = function() {
-
-
   var trEl = document.createElement('tr');
   var tdEl = document.createElement('td');
   tdEl.textContent = this.storeName;
@@ -86,7 +73,7 @@ SalmonCookieStore.prototype.render = function() {
 function makeHeaderRow() {
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
-  thEl.textContent = '~';
+  thEl.textContent = '';
   trEl.appendChild(thEl);
   salesTable.appendChild(trEl);
   for(var i = 0; i < hoursOfOperation.length; i++) {
@@ -108,7 +95,6 @@ function renderAllLocations() {
 }
 
 
-
 new SalmonCookieStore('First and Pike', 23, 65, 6.3);
 new SalmonCookieStore('SeaTac Airport', 3, 24, 1.2);
 new SalmonCookieStore('Seattle Center', 11, 38, 3.7);
@@ -117,19 +103,3 @@ new SalmonCookieStore('Alki', 2, 16, 4.6);
 
 makeHeaderRow();
 renderAllLocations();
-
-
-
-// alki.render = function() {
-//   var alkiUlEl = document.getElementById('alki');
-//   for(var i = 0; i < this.hourlyCookies.length; i++) {
-//     var liEl = document.createElement('li');
-//     liEl.textContent = hoursOfOperation[i] + ': ' + this.hourlyCookies[i] + ' cookies.';
-//     alkiUlEl.appendChild(liEl);
-//   }
-//   var liElTotalCookies = document.createElement('li');
-//   liElTotalCookies.textContent = 'Total: ' + this.totalDailyCookies + ' cookies.';
-//   alkiUlEl.appendChild(liElTotalCookies);
-// };
-
-// alki.render();

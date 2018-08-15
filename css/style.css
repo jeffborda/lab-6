@@ -17,7 +17,7 @@ li {
   margin: 1vw;
   border: 1vw;
   padding: 1.5vw 5vw 1.5vw 5vw;
-  font-size: 1.5em; //try 14pt
+  font-size: 1.5em;
 }
 
 h1 {
@@ -32,10 +32,8 @@ img {
   width: 45%;
 }
 
-table {
-  
-  border-collapse: collapse;
-  
+table {  
+  border-collapse: collapse;  
 }
 
 table, th, td {
