@@ -136,6 +136,9 @@ function handleNewStoreSubmit(event) {
   var min = parseInt(event.target.min.value);
   var max = parseInt(event.target.max.value);
   var avg = parseFloat(event.target.avg.value);
+
+  //add some error checking here
+
   new SalmonCookieStore(location, min, max, avg);
 
   event.target.location.value = null;
@@ -143,7 +146,7 @@ function handleNewStoreSubmit(event) {
   event.target.max.value = null;
   event.target.avg.value = null;
 
-  salesTable.innerHTML = '';
+  salesTable.innerHTML = ''; //clears out the table, so it can be re-rendered with new locations
   makeHeaderRow();
   renderAllLocations();
   makeFooterRow();

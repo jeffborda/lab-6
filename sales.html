@@ -7,37 +7,24 @@
         <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
     </head>
     <body>
-      <h1>Pat's Locations</h1>
-
+      <h1 id="sales-site-heading">Pat's Sales Site</h1>
       <div id="add-store">
-        <h2>Enter New Location</h2>
-
+        <h2 id="enter-location-heading">Enter New Location</h2>
         <form id="new-store-form">
-            <fieldset>
-                <!-- <legen>New store submission form</legen> -->
-  
+            <fieldset>  
                 <label for="location">Location Name:</label>
-                <input name="location" type="text" required />
-  
+                <input name="location" type="text" required /> <!--create better names.. more descriptive, don't abbreviate nouns, kebob case not camel case, just like other variables-->  
                 <label for="min">Minimum customers:</label>
-                <input name="min" type="number" required min="1" max="1000" />
-  
+                <input name="min" type="number" required min="1" max="1000" />  
                 <label for="max">Maximum customers:</label>
-                <input name="max" type="number" required min="1" max="1000" />
-  
+                <input name="max" type="number" required min="1" max="1000" />  
                 <label for="avg">Average cookies per hour:</label>
-                <input name="avg" type="text" required minlength="1" maxlength="4" />
-  
-  
-  
+                <input name="avg" type="text" required minlength="1" maxlength="4" /> <!--try using 'step="any" to allow numbers to increment with decimal?-->    
                 <button type="submit">Create new location</button>
             </fieldset>
         </form>
       </div>
-
       <table id="stores"></table>
-
-
       <script src="js/app.js" type="text/javascript"></script>
     </body>
 </html>
