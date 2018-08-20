@@ -137,8 +137,6 @@ function handleNewStoreSubmit(event) {
   var max = parseInt(event.target.max.value);
   var avg = parseFloat(event.target.avg.value);
 
-  //add some error checking here
-
   new SalmonCookieStore(location, min, max, avg);
 
   event.target.location.value = null;
